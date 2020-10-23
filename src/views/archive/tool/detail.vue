@@ -1,0 +1,144 @@
+<template>
+  <v-container class="bgWht picList" elevation-4>
+    <bread-crumbs :bread-nav="breadNav"></bread-crumbs>
+    <list-header :title="info.name" :has-tip="false"></list-header>
+    <v-card class="detail">
+      <v-list dense class="pt-8 pb-16">
+        <v-row>
+          <v-col cols="12" class="py-8">
+            <v-list-item>
+              <v-list-item-content>
+                <v-img :src="apiUrl + info.photoSrc" height="160" contain></v-img>
+              </v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">英文名：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.engName }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col v-if="info.jpnName" cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">日文名：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.jpnName }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">能否DIY：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.isDIY ? '可以DIY制作' : '不可以DIY制作' }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">价格：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.price }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">豆狸回收价格：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.price * 0.25 }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="4" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">箱子回收价格：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.price * 0.2 }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col v-if="info.durability" cols="8" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">耐久度：</v-list-item-content>
+              <v-list-item-content class="align-end"> {{ info.durability }} </v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="6" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">获取途径：</v-list-item-content>
+              <v-list-item-content class="align-end">{{ info.channelInfo }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="12" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">途径详情：</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col cols="12" class="pt-2 pb-8">
+            <v-list-item>
+              <v-list-item-content class="align-end">{{ info.channelDetail ? info.channelDetail : '暂无' }}</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <!-- <v-col v-if="morePhoto" cols="12" class="py-2">
+            <v-list-item>
+              <v-list-item-content class="label">颜色款式：</v-list-item-content>
+            </v-list-item>
+          </v-col>
+          <v-col v-if="morePhoto" cols="12" class="py-2 d-flex photoList">
+            <v-list-item v-for="(photo, i) in info.photoSrc" :key="photo + i">
+              <v-img :src="apiUrl + photo.src" height="128" contain></v-img>
+              <p class="mb-2">{{ photo.name.replace('.png', '') }}</p>
+            </v-list-item>
+          </v-col> -->
+        </v-row>
+      </v-list>
+    </v-card>
+  </v-container>
+</template>
+
+<script>
+import { mapGetters } from 'vuex'
+import { getTool } from '@/api/tool'
+
+export default {
+  name: 'ToolDetail',
+  data() {
+    return {
+      loading: true,
+      id: this.$route.params.id,
+      info: {},
+      breadNav: [
+        {
+          text: '首页',
+          disabled: false,
+          href: '/'
+        },
+        {
+          text: '工具图鉴',
+          href: '/archive/tool'
+        }
+      ]
+    }
+  },
+  computed: {
+    ...mapGetters(['apiUrl']),
+    morePhoto() {
+      return this.info.photoSrc.length > 1
+    }
+  },
+  watch: {},
+  created() {
+    this.getDetail()
+  },
+  methods: {
+    getDetail() {
+      this.loading = true
+      getTool(this.id).then(response => {
+        this.info = response.data
+        const channelsData = this.info.channels
+        const activity = this.info.activity ? '[' + this.info.activity + '期间] ' : ''
+        this.info.channelInfo = activity + channelsData.join('/')
+        this.breadNav.push({
+          text: this.info.name,
+          disabled: true,
+          href: '/detail/tool/' + this.id
+        })
+        this.loading = false
+      })
+    }
+  }
+}
+</script>
+
+<style scoped></style>
