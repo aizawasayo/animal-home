@@ -1,4 +1,4 @@
-import Layout from "@/views/layout/index"
+import Layout from "@views/layout/index"
 
 const communityRouter = {
   path: '/community',
@@ -7,7 +7,7 @@ const communityRouter = {
   redirect: '/community/board',
   children: [{    
       path: 'board',
-      component: () => import('@/views/community/board'),
+      component: () => import('@views/community/board'),
       name: 'Board',
       meta: {
         title: '森友墙'
@@ -15,7 +15,7 @@ const communityRouter = {
     }, 
     {
       path: 'board/add',
-      component: () => import('@/views/community/board/add'),
+      component: () => import('@views/community/board/add'),
       name:'BoardAdd',
       meta: {
         title: '发布我的信息',
@@ -24,7 +24,7 @@ const communityRouter = {
     },
     {
       path: 'turnip',
-      component: () => import('@/views/community/turnip'),
+      component: () => import('@views/community/turnip'),
       name: 'Turnip',
       meta: {
         title: '菜市场'
@@ -32,7 +32,7 @@ const communityRouter = {
     }, 
     {
       path: 'turnip/add',
-      component: () => import('@/views/community/turnip/add'),
+      component: () => import('@views/community/turnip/add'),
       name: 'TurnipAdd',
       meta: {
         title: '发布我的大头菜信息',
@@ -41,7 +41,7 @@ const communityRouter = {
     },
     {
       path: 'trade',
-      component: () => import('@/views/community/trade'),
+      component: () => import('@views/community/trade'),
       name: 'Trade',
       meta: {
         title: '交易区'
@@ -49,7 +49,7 @@ const communityRouter = {
     },
     {
       path: 'trade/add',
-      component: () => import('@/views/community/trade/add'),
+      component: () => import('@views/community/trade/add'),
       name: 'TradeAdd',
       meta: {
         title: '发布我的交易信息',

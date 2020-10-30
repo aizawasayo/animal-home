@@ -61,7 +61,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getPlants } from '@/api/plant'
+import { getPlants } from '@api/plant'
 import getOption from '@/utils/get-option'
 
 export default {

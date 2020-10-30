@@ -63,10 +63,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapGetters } from 'vuex'
-import { getUser, editUser } from '@/api/user'
-import { upload } from '@/api/upload'
+import { DatePicker } from 'view-design'
+import { getUser, editUser } from '@api/user'
+import { upload } from '@api/upload'
 import { timestamp, standardTime } from '@/utils'
+
+Vue.component('DatePicker', DatePicker)
 
 export default {
   name: 'UserEdit',

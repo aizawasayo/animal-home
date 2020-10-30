@@ -154,7 +154,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getInsects } from '@/api/insect'
+import { getInsects } from '@api/insect'
 import getOption from '@/utils/get-option'
 
 export default {

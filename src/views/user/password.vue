@@ -50,7 +50,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { modifyPsw } from '@/api/user'
+import { modifyPsw } from '@api/user'
 export default {
   name: 'PswEdit',
   data() {

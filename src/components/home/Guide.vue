@@ -12,7 +12,7 @@
         <v-col cols="6" class="py-0">
           <v-row dense>
             <v-col :class="guide.flex === 12 ? 'pt-0' : ''" v-for="(guide, i) in picGuide" :key="guide.title + i" :cols="guide.flex">
-              <v-card>
+              <v-card :href="'/detail/guide/' + guide._id">
                 <v-img
                   :src="apiUrl + guide.image_uri"
                   class="white--text align-end"
@@ -32,7 +32,13 @@
           <v-card tile>
             <v-list>
               <v-list-item-group color="info">
-                <v-list-item v-for="(item, i) in guideList" :key="'guideList' + i" color="anchor" link :href="item.src" :selectable="true">
+                <v-list-item
+                  v-for="(item, i) in guideList"
+                  :key="'guideList' + i"
+                  color="anchor"
+                  :href="'/detail/guide/' + item._id"
+                  :selectable="true"
+                >
                   <span class="cyan--text text--lighten-2 mr-1">[{{ item.platforms[0] }}]</span>
                   <!-- <v-list-item-avatar v-if="avatar">
                           <v-img :src="item.avatar"></v-img>
@@ -52,7 +58,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getGuideList } from '@/api/guide'
+import { getGuideList } from '@api/guide'
 export default {
   data() {
     return {

@@ -24,7 +24,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(item, i) in boardList" :key="item.topic + i">
+                <tr v-for="(item, i) in boardList" :key="item._id + i">
                   <td class="cyan--text text--lighten-2">
                     <v-chip :color="item.color ? item.color : 'secondary'" outlined>
                       <v-avatar left>
@@ -34,7 +34,9 @@
                       {{ item.topic }}
                     </v-chip>
                   </td>
-                  <td>{{ item.content | textFilter(15) }}</td>
+                  <td>
+                    <a :href="'/detail/board/' + item._id">{{ item.content | textFilter(15) }}</a>
+                  </td>
                   <td>{{ item.updated_time | parseTime('{y}-{m}-{d} {h}:{i}') }}</td>
                 </tr>
               </tbody>
@@ -55,7 +57,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(item, i) in turnipList" :key="item.validTime + i">
+                <tr v-for="(item, i) in turnipList" :key="item._id + i">
                   <td>
                     <v-chip :color="item.exchangeType === '我有菜' ? 'primary' : 'secondary'" text-color="white">
                       <v-avatar left>
@@ -66,7 +68,9 @@
                     </v-chip>
                   </td>
                   <td>{{ item.price }}</td>
-                  <td>{{ item.detail | textFilter(20) }}</td>
+                  <td>
+                    <a :href="'/detail/turnip/' + item._id">{{ item.detail | textFilter(20) }}</a>
+                  </td>
                   <td class="text-center">
                     <v-btn class="cyan--text text--lighten-2" text>{{ item.isLineup === true ? '立即上岛' : '立即联系' }}</v-btn>
                   </td>
@@ -88,13 +92,15 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(item, i) in tradeList" :key="item.validTime + i">
+                <tr v-for="(item, i) in tradeList" :key="item._id + i">
                   <td class="cyan--text text--lighten-2">
                     <v-chip :color="item.exchangeType.indexOf('特殊NPC') > -1 ? 'primary' : 'secondary'" text-color="white">
                       {{ item.exchangeType }}
                     </v-chip>
                   </td>
-                  <td>{{ item.detail | textFilter(18) }}</td>
+                  <td>
+                    <a :href="'/detail/trade/' + item._id">{{ item.detail | textFilter(18) }}</a>
+                  </td>
                   <td class="text-center">
                     <v-btn class="cyan--text text--lighten-2" text>{{ item.isLineup === true ? '立即上岛' : '立即联系' }}</v-btn>
                   </td>
@@ -109,9 +115,9 @@
 </template>
 
 <script>
-import { getBoardList } from '@/api/board'
-import { getTurnipList } from '@/api/turnip'
-import { getTradeList } from '@/api/trade'
+import { getBoardList } from '@api/board'
+import { getTurnipList } from '@api/turnip'
+import { getTradeList } from '@api/trade'
 export default {
   data() {
     return {

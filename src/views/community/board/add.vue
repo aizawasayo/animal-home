@@ -38,9 +38,9 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { addBoard } from '@/api/board'
-import { uploadMult } from '@/api/upload'
-import { getOptionList } from '@/api/option'
+import { addBoard } from '@api/board'
+import { uploadMult } from '@api/upload'
+import { getOptionList } from '@api/option'
 import getOption from '@/utils/get-option'
 import { timestamp, parseTime } from '@/utils'
 

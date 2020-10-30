@@ -1,5 +1,5 @@
 /** When your routing table is too long, you can split it into small modules **/
-import Layout from "@/views/layout/index"
+import Layout from "@views/layout/index"
 import museumRouter from './museum'
 
 const archiveRouter = {
@@ -12,7 +12,7 @@ const archiveRouter = {
   },
   children: [{
       path: 'islander',
-      component: () => import('@/views/archive/islander'),
+      component: () => import('@views/archive/islander'),
       name: 'Islander',
       meta: {
         title: '岛民'
@@ -21,7 +21,7 @@ const archiveRouter = {
     museumRouter,
     {
       path: 'furniture',
-      component: () => import('@/views/archive/furniture'),
+      component: () => import('@views/archive/furniture'),
       name: 'Furniture',
       meta: {
         title: '家具'
@@ -29,7 +29,7 @@ const archiveRouter = {
     },
     {
       path: 'clothing',
-      component: () => import('@/views/archive/clothing'),
+      component: () => import('@views/archive/clothing'),
       name: 'Clothing',
       meta: {
         title: '服饰'
@@ -37,7 +37,7 @@ const archiveRouter = {
     },
     {
       path: 'plant',
-      component: () => import('@/views/archive/plant'),
+      component: () => import('@views/archive/plant'),
       name: 'Plant',
       meta: {
         title: '植物'
@@ -45,7 +45,7 @@ const archiveRouter = {
     },
     {
       path: 'material',
-      component: () => import('@/views/archive/material'),
+      component: () => import('@views/archive/material'),
       name: 'Material',
       meta: {
         title: '素材'
@@ -53,7 +53,7 @@ const archiveRouter = {
     },
     {
       path: 'tool',
-      component: () => import('@/views/archive/tool'),
+      component: () => import('@views/archive/tool'),
       name: 'Tool',
       meta: {
         title: '工具'
@@ -61,7 +61,7 @@ const archiveRouter = {
     },
     {
       path: 'recipe',
-      component: () => import('@/views/archive/recipe'),
+      component: () => import('@views/archive/recipe'),
       name: 'Recipe',
       meta: {
         title: 'DIY配方'
@@ -69,7 +69,7 @@ const archiveRouter = {
     },
     {
       path: 'record',
-      component: () => import('@/views/archive/record'),
+      component: () => import('@views/archive/record'),
       name: 'Record',
       meta: {
         title: '唱片'

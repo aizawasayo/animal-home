@@ -91,7 +91,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getInsect } from '@/api/insect'
+import { getInsect } from '@api/insect'
 
 export default {
   name: 'InsectDetail',

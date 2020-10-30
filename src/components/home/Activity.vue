@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import { getOptionList } from '@/api/option'
+import { getOptionList } from '@api/option'
 export default {
   data() {
     return {

@@ -114,7 +114,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getFurniture } from '@/api/furniture'
+import { getFurniture } from '@api/furniture'
 
 export default {
   name: 'FurnitureDetail',

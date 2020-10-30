@@ -90,7 +90,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getFish } from '@/api/fish'
+import { getFish } from '@api/fish'
 
 export default {
   name: 'FishDetail',

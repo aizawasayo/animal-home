@@ -49,7 +49,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getDesign } from '@/api/design'
+import { getDesign } from '@api/design'
 
 export default {
   name: 'DesignDetail',

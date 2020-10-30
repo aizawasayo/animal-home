@@ -121,7 +121,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getClothing } from '@/api/clothing'
+import { getClothing } from '@api/clothing'
 
 export default {
   name: 'ClothingDetail',

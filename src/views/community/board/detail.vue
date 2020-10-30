@@ -45,7 +45,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getBoard } from '@/api/board'
+import { getBoard } from '@api/board'
 
 export default {
   name: 'BoardDetail',

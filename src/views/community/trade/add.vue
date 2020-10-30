@@ -88,9 +88,14 @@
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapState, mapGetters } from 'vuex'
-import { addTrade } from '@/api/trade'
+import { Cascader, TimePicker } from 'view-design'
+import { addTrade } from '@api/trade'
 import { timestamp, parseTime } from '@/utils'
+
+Vue.component('Cascader', Cascader)
+Vue.component('TimePicker', TimePicker)
 
 export default {
   name: 'TradeAdd',

@@ -100,7 +100,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTurnipList } from '@/api/turnip'
+import { getTurnipList } from '@api/turnip'
 
 export default {
   name: 'Turnip',

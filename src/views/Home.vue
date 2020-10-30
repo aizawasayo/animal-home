@@ -24,17 +24,17 @@
 
 <script>
 // @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@components/HelloWorld.vue'
 
 export default {
   name: 'Home',
   components: {
-    Banner: () => import('@/components/home/Banner'),
-    Archive: () => import('@/components/home/Archive'),
-    Birthday: () => import('@/components/home/Birthday'),
-    Guide: () => import('@/components/home/Guide'),
-    Community: () => import('@/components/home/Community'),
-    Activity: () => import('@/components/home/Activity')
+    Banner: () => import('@components/home/Banner'),
+    Archive: () => import('@components/home/Archive'),
+    Birthday: () => import('@components/home/Birthday'),
+    Guide: () => import('@components/home/Guide'),
+    Community: () => import('@components/home/Community'),
+    Activity: () => import('@components/home/Activity')
   }
 }
 </script>

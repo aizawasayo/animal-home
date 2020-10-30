@@ -15,7 +15,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getBannerList } from '@/api/banner'
+import { getBannerList } from '@api/banner'
 
 export default {
   data() {

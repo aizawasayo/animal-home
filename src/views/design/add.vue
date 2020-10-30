@@ -57,8 +57,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { addDesign } from '@/api/design'
-import { uploadMult } from '@/api/upload'
+import { addDesign } from '@api/design'
+import { uploadMult } from '@api/upload'
 
 export default {
   name: 'DesignAdd',

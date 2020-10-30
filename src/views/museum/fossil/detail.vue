@@ -48,7 +48,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getFossil } from '@/api/fossil'
+import { getFossil } from '@api/fossil'
 
 export default {
   name: 'FossilDetail',

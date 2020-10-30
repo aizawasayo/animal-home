@@ -81,7 +81,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getArtwork } from '@/api/artwork'
+import { getArtwork } from '@api/artwork'
 
 export default {
   name: 'ArtworkDetail',

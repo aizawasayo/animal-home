@@ -96,7 +96,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTradeList } from '@/api/trade'
+import { getTradeList } from '@api/trade'
 
 export default {
   name: 'Trade',
@@ -145,7 +145,7 @@ export default {
     }
   },
   created() {
-    //this.getList()
+    // this.getList()
   },
   methods: {
     getList() {

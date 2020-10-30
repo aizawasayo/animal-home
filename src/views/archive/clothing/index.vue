@@ -83,8 +83,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getClothingList } from '@/api/clothing'
-import { getOptionList } from '@/api/option'
+import { getClothingList } from '@api/clothing'
+import { getOptionList } from '@api/option'
 import getOption from '@/utils/get-option'
 
 export default {

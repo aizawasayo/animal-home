@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 有子路由的都需要 Layout，来添加一个嵌套路由出口
-import Layout from '@/views/layout/index'
+import Layout from '@views/layout/index'
 import {
   getToken
 } from '@/utils/auth'
@@ -19,7 +19,7 @@ import detailRouter from './modules/detail'
 
 const routes = [{
     path: '/',
-    component: () => import('@/views/home'), // home.vue 里的 name 也是 'Home'
+    component: () => import('@views/home'), // home.vue 里的 name 也是 'Home'
     name: 'Home', // 此处举例说明：路由 name 命名时候尽量保证唯一性，并且和其对应的组件名称一致，以便于应用keep-alive
     meta: {
       title: '动森之家'
@@ -27,7 +27,7 @@ const routes = [{
   },
   {
     path: '/guide',
-    component: () => import( /* webpackChunkName: "guide" */ '@/views/guide'),
+    component: () => import( /* webpackChunkName: "guide" */ '@views/guide'),
     name: 'Guide',
     meta: {
       title: '攻略'
@@ -41,7 +41,7 @@ const routes = [{
     component: Layout,
     children: [{
         path: '/',
-        component: () => import('@/views/design'),
+        component: () => import('@views/design'),
         name: 'Design',
         meta: {
           title: '设计分享'
@@ -49,7 +49,7 @@ const routes = [{
       },
       {
         path: 'add',
-        component: () => import('@/views/design/add'),
+        component: () => import('@views/design/add'),
         name: 'DesignAdd',
         meta: {
           title: '发布我的设计',
@@ -60,7 +60,7 @@ const routes = [{
   },
   {
     path: '/login',
-    component: () => import('@/views/login'),
+    component: () => import('@views/login'),
     name:'Login'
   },
   {
@@ -72,7 +72,7 @@ const routes = [{
     },
     children: [{
         path: '/',
-        component: () => import('@/views/user'),
+        component: () => import('@views/user'),
         name: 'UserCenter',
         meta: {
           title: '用户中心',
@@ -81,7 +81,7 @@ const routes = [{
       },
       {
         path: 'edit',
-        component: () => import('@/views/user/edit'),
+        component: () => import('@views/user/edit'),
         name: 'UserEdit',
         meta: {
           title: '修改个人信息',
@@ -90,7 +90,7 @@ const routes = [{
       },
       {
         path: 'register',
-        component: () => import('@/views/user/register'),
+        component: () => import('@views/user/register'),
         name: 'Register',
         meta: {
           title: '注册新用户',
@@ -98,7 +98,7 @@ const routes = [{
       },
       {
         path: 'password',
-        component: () => import('@/views/user/password'),
+        component: () => import('@views/user/password'),
         name: 'PswEdit',
         meta: {
           title: '修改密码',
@@ -109,7 +109,7 @@ const routes = [{
   },
   {
     path: '/404',
-    component: () => import('@/views/404'),
+    component: () => import('@views/404'),
     hidden: true
   },
   {

@@ -52,11 +52,11 @@
 <script>
 import { mapGetters } from 'vuex'
 import { getUserId } from '@/utils/auth'
-import { getComments, addComment } from '@/api/comment'
-import { addGuide } from '@/api/guide'
-import { addBoard } from '@/api/board'
-import { addTurnip } from '@/api/turnip'
-import { addTrade } from '@/api/trade'
+import { getComments, addComment } from '@api/comment'
+import { addGuide } from '@api/guide'
+import { addBoard } from '@api/board'
+import { addTurnip } from '@api/turnip'
+import { addTrade } from '@api/trade'
 import { timestamp, parseTime } from '@/utils'
 export default {
   name: 'Comment',

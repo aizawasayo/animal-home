@@ -100,8 +100,8 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getBoardList } from '@/api/board'
-import { getOptionList } from '@/api/option'
+import { getBoardList } from '@api/board'
+import { getOptionList } from '@api/option'
 
 export default {
   name: 'Board',

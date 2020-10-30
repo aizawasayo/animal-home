@@ -1,6 +1,6 @@
 import {
   getOptionList
-} from '@/api/option'
+} from '@api/option'
 
 export default function getOption(type, callback) {
   getOptionList({

@@ -77,7 +77,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getUser } from '@/api/user'
+import { getUser } from '@api/user'
 
 export default {
   name: 'UserCenter',

@@ -149,7 +149,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getArtworkList } from '@/api/artwork'
+import { getArtworkList } from '@api/artwork'
 import getOption from '@/utils/get-option'
 
 export default {

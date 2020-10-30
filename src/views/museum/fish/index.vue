@@ -154,7 +154,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getFishes } from '@/api/fish'
+import { getFishes } from '@api/fish'
 import getOption from '@/utils/get-option'
 
 export default {

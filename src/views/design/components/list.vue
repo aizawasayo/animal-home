@@ -67,7 +67,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getDesignList } from '@/api/design'
+import { getDesignList } from '@api/design'
 
 export default {
   name: 'DesignList',

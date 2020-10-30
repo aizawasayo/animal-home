@@ -84,7 +84,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getHalobios } from '@/api/halobios'
+import { getHalobios } from '@api/halobios'
 
 export default {
   name: 'HalobiosDetail',

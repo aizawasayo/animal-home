@@ -67,7 +67,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getPlant } from '@/api/plant'
+import { getPlant } from '@api/plant'
 
 export default {
   name: 'PlantDetail',

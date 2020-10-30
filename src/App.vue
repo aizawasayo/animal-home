@@ -12,14 +12,14 @@
 </template>
 
 <script>
-import Confirm from '@/components/message/Confirm'
-import DialogLoader from '@/components/message/DialogLoader'
+import Confirm from '@components/message/Confirm'
+import DialogLoader from '@components/message/DialogLoader'
 export default {
   name: 'App',
   components: {
-    CoreAppBar: () => import('@/components/core/AppBar'),
-    CoreView: () => import('@/components/core/View'),
-    CoreFooter: () => import('@/components/core/Footer'),
+    CoreAppBar: () => import('@components/core/AppBar'),
+    CoreView: () => import('@components/core/View'),
+    CoreFooter: () => import('@components/core/Footer'),
     DialogLoader,
     Confirm
   },

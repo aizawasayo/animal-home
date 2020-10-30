@@ -136,7 +136,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getIslanders } from '@/api/islander'
+import { getIslanders } from '@api/islander'
 import getOption from '@/utils/get-option'
 
 export default {

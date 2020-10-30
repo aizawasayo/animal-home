@@ -15,8 +15,8 @@
         </v-col>
         <v-col cols="4">
           <TimePicker
-            type="time"
             v-model="newTurnip.chooseTime"
+            type="time"
             format="HH点mm分ss秒"
             :steps="[1, 15, 15]"
             placeholder="请选择截止时间"
@@ -94,9 +94,13 @@
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex'
-import { addTurnip } from '@/api/turnip'
+import Vue from 'vue'
+import { mapGetters } from 'vuex'
+import { TimePicker } from 'view-design'
+import { addTurnip } from '@api/turnip'
 import { timestamp, parseTime } from '@/utils'
+
+Vue.component('TimePicker', TimePicker)
 
 export default {
   name: 'TurnipAdd',
@@ -109,9 +113,9 @@ export default {
         exchangeType: '我有价', // 交易类型，我有菜/我有价
         chooseTime: '',
         validTime: '',
-        isLineup: true, //是否排队模式
-        isPublic: true, //是否公开
-        isAuto: true, //自动叫号
+        isLineup: true, // 是否排队模式
+        isPublic: true, // 是否公开
+        isAuto: true, // 自动叫号
         maxPeople: 2, // 登岛人数限制
         maxTime: 10, // 登岛最长时间 单位（分钟）
         contact: 'SW', // 联系方式
@@ -203,10 +207,10 @@ export default {
       this.$refs.addForm.resetValidation()
     },
     getTimeVal() {
-      let today = new Date()
-      let hours = today.getHours
-      let mintutes = today.getMinutes()
-      let seconds = today.getSeconds()
+      const today = new Date()
+      const hours = today.getHours
+      const mintutes = today.getMinutes()
+      const seconds = today.getSeconds()
       let todayString = parseTime(today)
       if (this.newTurnip.chooseTime) {
         let chooseTime = this.newTurnip.chooseTime.replace('点', ':')

@@ -63,7 +63,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getMaterials } from '@/api/material'
+import { getMaterials } from '@api/material'
 import getOption from '@/utils/get-option'
 
 export default {

@@ -120,7 +120,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getHalobiosList } from '@/api/halobios'
+import { getHalobiosList } from '@api/halobios'
 import getOption from '@/utils/get-option'
 
 export default {

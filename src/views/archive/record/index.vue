@@ -55,7 +55,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getRecords } from '@/api/record'
+import { getRecords } from '@api/record'
 import getOption from '@/utils/get-option'
 
 export default {

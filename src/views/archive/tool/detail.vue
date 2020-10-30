@@ -89,7 +89,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTool } from '@/api/tool'
+import { getTool } from '@api/tool'
 
 export default {
   name: 'ToolDetail',

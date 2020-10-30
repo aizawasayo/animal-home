@@ -57,7 +57,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTurnip } from '@/api/turnip'
+import { getTurnip } from '@api/turnip'
 
 export default {
   name: 'TurnipDetail',

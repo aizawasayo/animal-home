@@ -77,7 +77,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getRecipe } from '@/api/recipe'
+import { getRecipe } from '@api/recipe'
 
 export default {
   name: 'RecipeDetail',

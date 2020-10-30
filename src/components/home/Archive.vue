@@ -16,7 +16,7 @@
         style="width:20%"
         @click="goArchive(link.href)"
       >
-        <v-img :src="require(`@/assets/icon-${link.src}.png`)" width="100" class="rounded-circle elevation-1"></v-img>
+        <v-img :src="require(`@assets/icon-${link.src}.png`)" width="100" class="rounded-circle elevation-1"></v-img>
         <p justify="center" class="cyan--text text--lighten-2 mb-0 py-2">
           {{ link.name }}
         </p>

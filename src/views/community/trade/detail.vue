@@ -52,7 +52,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTrade } from '@/api/trade'
+import { getTrade } from '@api/trade'
 
 export default {
   name: 'TradeDetail',

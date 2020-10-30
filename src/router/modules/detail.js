@@ -1,4 +1,4 @@
-import Layout from "@/views/layout/index"
+import Layout from "@views/layout/index"
 
 const detailRouter = {
   path: '/detail',
@@ -10,7 +10,7 @@ const detailRouter = {
   },
   children: [{
       path: 'islander/:id',
-      component: () => import('@/views/archive/islander/detail'),
+      component: () => import('@views/archive/islander/detail'),
       name: 'IslanderDetail',
       meta: {
         title: '岛民详情'
@@ -18,7 +18,7 @@ const detailRouter = {
     },
     {
       path: 'furniture/:id',
-      component: () => import('@/views/archive/furniture/detail'),
+      component: () => import('@views/archive/furniture/detail'),
       name: 'FurnitureDetail',
       meta: {
         title: '家具详情'
@@ -26,7 +26,7 @@ const detailRouter = {
     },
     {
       path: 'clothing/:id',
-      component: () => import('@/views/archive/clothing/detail'),
+      component: () => import('@views/archive/clothing/detail'),
       name: 'ClothingDetail',
       meta: {
         title: '服饰详情'
@@ -34,7 +34,7 @@ const detailRouter = {
     },
     {
       path: 'plant/:id',
-      component: () => import('@/views/archive/plant/detail'),
+      component: () => import('@views/archive/plant/detail'),
       name: 'PlantDetail',
       meta: {
         title: '植物详情'
@@ -42,7 +42,7 @@ const detailRouter = {
     },
     {
       path: 'material/:id',
-      component: () => import('@/views/archive/material/detail'),
+      component: () => import('@views/archive/material/detail'),
       name: 'MaterialDetail',
       meta: {
         title: '素材详情'
@@ -50,7 +50,7 @@ const detailRouter = {
     },
     {
       path: 'tool/:id',
-      component: () => import('@/views/archive/tool/detail'),
+      component: () => import('@views/archive/tool/detail'),
       name: 'ToolDetail',
       meta: {
         title: '工具详情'
@@ -58,7 +58,7 @@ const detailRouter = {
     },
     {
       path: 'recipe/:id',
-      component: () => import('@/views/archive/recipe/detail'),
+      component: () => import('@views/archive/recipe/detail'),
       name: 'RecipeDetail',
       meta: {
         title: '配方详情'
@@ -66,7 +66,7 @@ const detailRouter = {
     },
     // {
     //   path: 'record/:id',
-    //   component: () => import('@/views/archive/record/detail'),
+    //   component: () => import('@views/archive/record/detail'),
     //   name: 'recordDetail',
     //   meta: {
     //     title: '唱片详情'
@@ -74,7 +74,7 @@ const detailRouter = {
     // },
     {
       path: 'fish/:id',
-      component: () => import('@/views/museum/fish/detail'),
+      component: () => import('@views/museum/fish/detail'),
       name: 'FishDetail',
       meta: {
         title: '鱼类详情'
@@ -82,7 +82,7 @@ const detailRouter = {
     },
     {
       path: 'insect/:id',
-      component: () => import('@/views/museum/insect/detail'),
+      component: () => import('@views/museum/insect/detail'),
       name: 'InsectDetail',
       meta: {
         title: '昆虫详情'
@@ -90,7 +90,7 @@ const detailRouter = {
     },
     {
       path: 'fossil/:id',
-      component: () => import('@/views/museum/fossil/detail'),
+      component: () => import('@views/museum/fossil/detail'),
       name: 'FossilDetail',
       meta: {
         title: '化石详情'
@@ -98,7 +98,7 @@ const detailRouter = {
     },
     {
       path: 'artwork/:id',
-      component: () => import('@/views/museum/artwork/detail'),
+      component: () => import('@views/museum/artwork/detail'),
       name: 'ArtworkDetail',
       meta: {
         title: '艺术品详情'
@@ -106,7 +106,7 @@ const detailRouter = {
     },
     {
       path: 'halobios/:id',
-      component: () => import('@/views/museum/halobios/detail'),
+      component: () => import('@views/museum/halobios/detail'),
       name: 'HalobiosDetail',
       meta: {
         title: '海洋生物详情'
@@ -115,7 +115,7 @@ const detailRouter = {
     },
     {
       path: 'design/:id',
-      component: () => import('@/views/design/detail'),
+      component: () => import('@views/design/detail'),
       name: 'DesignDetail',
       meta: {
         title: 'DIY设计分享详情'
@@ -123,7 +123,7 @@ const detailRouter = {
     },
     {
       path: 'guide/:id',
-      component: () => import('@/views/guide/detail'),
+      component: () => import('@views/guide/detail'),
       name: 'GuideDetail',
       meta: {
         title: '攻略详情'
@@ -131,7 +131,7 @@ const detailRouter = {
     },
     {
       path: 'board/:id',
-      component: () => import('@/views/community/board/detail'),
+      component: () => import('@views/community/board/detail'),
       name: 'BoardDetail',
       meta: {
         title: '森友墙详情'
@@ -139,7 +139,7 @@ const detailRouter = {
     },
     {
       path: 'turnip/:id',
-      component: () => import('@/views/community/turnip/detail'),
+      component: () => import('@views/community/turnip/detail'),
       name: 'TunrnipDetail',
       meta: {
         title: '菜市场详情'
@@ -147,7 +147,7 @@ const detailRouter = {
     },
     {
       path: 'trade/:id',
-      component: () => import('@/views/community/trade/detail'),
+      component: () => import('@views/community/trade/detail'),
       name: 'TradeDetail',
       meta: {
         title: '交易详情'

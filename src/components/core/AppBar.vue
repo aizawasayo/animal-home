@@ -2,7 +2,7 @@
   <v-app-bar app color="secondary" dark>
     <div class="d-flex align-center">
       <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
-      <v-img alt="Dongsen Logo" class="shrink mr-2" contain :src="require('@/assets/dongsen-logo.png')" transition="scale-transition" width="100" />
+      <v-img alt="Dongsen Logo" class="shrink mr-2" contain :src="require('@assets/dongsen-logo.png')" transition="scale-transition" width="100" />
       <v-toolbar-title class="teal--text font-weight-bold">动森之家</v-toolbar-title>
       <div class="d-flex align-center">
         <div v-for="(item, i) in menu" :key="'menu' + i" v-bind="item">

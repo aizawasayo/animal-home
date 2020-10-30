@@ -68,7 +68,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getTools } from '@/api/tool'
+import { getTools } from '@api/tool'
 import getOption from '@/utils/get-option'
 
 export default {

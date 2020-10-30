@@ -50,7 +50,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getMaterial } from '@/api/material'
+import { getMaterial } from '@api/material'
 
 export default {
   name: 'MaterialDetail',

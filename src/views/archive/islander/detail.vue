@@ -97,7 +97,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getIslander } from '@/api/islander'
+import { getIslander } from '@api/islander'
 
 export default {
   name: 'IslanderDetail',

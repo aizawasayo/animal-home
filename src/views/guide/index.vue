@@ -68,7 +68,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import { getGuideList } from '@/api/guide'
+import { getGuideList } from '@api/guide'
 
 export default {
   name: 'Guide',
