@@ -14,13 +14,3 @@ export function getClothing(id) {
     method: 'get'
   })
 }
-
-export function searchClothing(name) {
-  return request({
-    url: 'admin/clothing/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

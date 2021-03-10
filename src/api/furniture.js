@@ -14,13 +14,3 @@ export function getFurniture(id) {
     method: 'get'
   })
 }
-
-export function searchFurniture(name) {
-  return request({
-    url: 'admin/furniture/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

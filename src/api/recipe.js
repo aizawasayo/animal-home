@@ -14,13 +14,3 @@ export function getRecipe(id) {
     method: 'get'
   })
 }
-
-export function searchRecipe(name) {
-  return request({
-    url: 'admin/recipe/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

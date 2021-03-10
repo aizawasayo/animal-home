@@ -123,7 +123,7 @@ export default {
     getList() {
       this.queryInfo.aid = this.aid
       getComments(this.type, this.queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.total = response.data.total || 0
         switch (this.type) {
           case 'guide':

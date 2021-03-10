@@ -125,6 +125,8 @@ export default {
       }
       sortJson[sortBy] = sortDesc
       const sort = JSON.stringify(sortJson)
+      console.log(sort)
+      console.log(typeof sort)
       const queryInfo = {
         page: this.options.page,
         query: '',
@@ -133,7 +135,7 @@ export default {
         status: 'published'
       }
       getGuideList(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.total = response.data.total || 0
         // this.options.pageStop = Math.ceil(this.total / pageSize)
         this.loading = false

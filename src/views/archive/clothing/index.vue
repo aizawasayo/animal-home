@@ -197,7 +197,7 @@ export default {
         ...this.filters
       }
       getClothingList(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.total = response.data.total || 0
         this.options.pageStop = Math.ceil(this.total / this.options.itemsPerPage)
         this.loading = false

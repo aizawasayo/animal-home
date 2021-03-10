@@ -14,13 +14,3 @@ export function getPlant(id) {
     method: 'get'
   })
 }
-
-export function searchPlant(name) {
-  return request({
-    url: 'admin/plant/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

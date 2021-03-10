@@ -254,7 +254,7 @@ export default {
         ...this.filters
       }
       getIslanders(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.total = response.data.total || 0
         this.loading = false
       })

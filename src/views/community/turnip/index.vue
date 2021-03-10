@@ -170,7 +170,7 @@ export default {
         sort
       }
       getTurnipList(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.total = response.data.total || 0
         // this.options.pageStop = Math.ceil(this.total / pageSize)
         this.loading = false

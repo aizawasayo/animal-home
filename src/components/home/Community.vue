@@ -144,17 +144,17 @@ export default {
   methods: {
     getBoard() {
       getBoardList(this.queryInfo).then(response => {
-        this.boardList = response.data.records
+        this.boardList = response.data.list
       })
     },
     getTurnip() {
       getTurnipList(this.queryInfo).then(response => {
-        this.turnipList = response.data.records
+        this.turnipList = response.data.list
       })
     },
     getTrade() {
       getTradeList(this.queryInfo).then(response => {
-        this.tradeList = response.data.records
+        this.tradeList = response.data.list
       })
     },
     tabClick(e, type) {

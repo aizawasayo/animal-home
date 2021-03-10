@@ -22,7 +22,6 @@
             {{ item.text }}
           </v-btn>
         </div>
-
         <v-spacer />
 
         <!-- <v-text-field append-icon="mdi-magnify" flat hide-details solo-inverted class="ml-2" style="max-width: 300px;" /> -->
@@ -47,7 +46,7 @@
           <v-list-item href="/user/password">
             <v-list-item-title> <v-icon class="mr-1">mdi-key</v-icon>修改密码 </v-list-item-title>
           </v-list-item>
-          <v-list-item href="http://192.168.31.168:9528/" target="_blank">
+          <v-list-item href="http://106.54.168.208:1022/" target="_blank">
             <v-list-item-title> <v-icon class="mr-1">mdi-format-list-bulleted-square</v-icon>我发布的信息 </v-list-item-title>
           </v-list-item>
           <v-list-item>

@@ -14,13 +14,3 @@ export function getMaterial(id) {
     method: 'get'
   })
 }
-
-export function searchMaterial(name) {
-  return request({
-    url: 'admin/material/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

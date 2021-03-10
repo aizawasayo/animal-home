@@ -15,25 +15,3 @@ export function getBannerList(params){
     params
   })
 }
-
-export function addBanner(data) {
-  return request({
-    url: 'admin/banner',
-    method: 'post',
-    data
-  })
-}
-
-export function getBanner(id) {
-  return request({
-    url: 'admin/banner/' + id,
-    method: 'get'
-  })
-}
-
-export function deleteBanner(id) {
-  return request({
-    url: 'admin/banner/' + id,
-    method: 'delete'
-  })
-}

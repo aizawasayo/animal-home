@@ -15,14 +15,6 @@ export function logout() {
   })
 }
 
-export function getUsers(params) {
-  return request({
-    url: 'admin/user',
-    method: 'get',
-    params
-  })
-}
-
 export function addUser(data) {
   return request({
     url: 'admin/user',

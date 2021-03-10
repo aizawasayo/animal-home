@@ -14,13 +14,3 @@ export function getRecord(id) {
     method: 'get'
   })
 }
-
-export function searchRecord(name) {
-  return request({
-    url: 'admin/record/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

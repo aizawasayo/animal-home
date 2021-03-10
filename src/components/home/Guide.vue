@@ -82,7 +82,7 @@ export default {
   methods: {
     getList() {
       getGuideList(this.queryInfo).then(response => {
-        this.guideList = response.data.records
+        this.guideList = response.data.list
         this.guideList[0].flex = 12
         this.guideList[1].flex = 6
         this.guideList[2].flex = 6

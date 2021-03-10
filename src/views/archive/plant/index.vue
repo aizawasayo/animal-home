@@ -168,7 +168,7 @@ export default {
         ...this.filters
       }
       getPlants(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.list.forEach(item => {
           const typeData = item.type
           const growData = item.growStage

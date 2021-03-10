@@ -189,7 +189,7 @@ export default {
         ...this.filters
       }
       getMaterials(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.list.forEach(item => {
           const seasonData = item.season
           const activity = item.activity ? item.activity + '/' : ''

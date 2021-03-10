@@ -101,7 +101,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['userId']) //推荐这种
+    ...mapGetters(['userId']) // 推荐这种
   },
   methods: {
     submit() {
@@ -123,11 +123,10 @@ export default {
     },
     handleUpload() {
       // 图片上传成功后把临时地址保存到临时图片列表中
-      let formData = new FormData()
-      for (let file of this.uploadList) {
+      const formData = new FormData()
+      for (const file of this.uploadList) {
         formData.append('photoSrc', file, file.name)
       }
-
       uploadMult(formData).then(res => {
         if (res.code === 200) {
           this.$root.$dialogLoader.showSnackbar(res.message, { color: 'success' })

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@router/*": ["router/*"],
+      "@utils/*": ["utils/*"],
+      "@views/*": ["views/*"],
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@static/*": ["static/*"],
+      "@plugins/*": ["plugins/*"],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "vue.config.js",
+  ],
+}

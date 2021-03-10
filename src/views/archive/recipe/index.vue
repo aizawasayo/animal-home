@@ -207,7 +207,7 @@ export default {
         ...this.filters
       }
       getRecipes(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.list.forEach(item => {
           let channels = ''
           const season = item.season ? item.season + '/' : ''

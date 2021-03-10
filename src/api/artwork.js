@@ -14,13 +14,3 @@ export function getArtwork(id) {
     method: 'get'
   })
 }
-
-export function searchArtwork(name) {
-  return request({
-    url: 'admin/artwork/search',
-    method: 'get',
-    params: {
-      name
-    }
-  })
-}

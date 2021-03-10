@@ -172,7 +172,7 @@ export default {
         ...this.filters
       }
       getTools(queryInfo).then(response => {
-        this.list = response.data.records
+        this.list = response.data.list
         this.list.forEach(item => {
           let activity = ''
           const channelsData = item.channels
